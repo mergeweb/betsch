@@ -11,7 +11,7 @@
 # This will set the name of the project directory and become the subdomain
 set :project, 'betsch' # the GitHub project name
 set :github_user, "mergeweb" # Your GitHub username
-set :domain_name, "betsch.mergeweb.net" # should be something like project.mydomain.com
+set :domain_name, "betsch.upupdev.net" # should be something like project.mydomain.com
 set :user, 'merge' # VPS hosting ssh username
 set :domain, 'luigi.mergeweb.net' # IP or domain name to ssh to
 
@@ -53,6 +53,8 @@ set :use_sudo, false
 # Optional tasks ##########################################################################################
 # for use with shared files (e.g. config files)
 after "deploy:update_code" do
-  run "ln -s #{shared_path}/sites/default/files #{release_path}/sites/default"
+    run "ln -s #{shared_path}/sites/default #{release_path}/sites"
+    run "ln -s #{shared_path}/cache #{release_path}"
+    run "(cd #{release_path}/sites/all/themes/merge/scss/; compass compile -c config.rb merge.style.scss)"
 end
 after "deploy", "deploy:cleanup"
