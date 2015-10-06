@@ -13,6 +13,7 @@ datestamp = "1294208756"
 
 regions[header] = Header
 regions[navigation_bar] = Navigation Bar
+regions[content] = Content
 regions[content-left] = Content Left
 regions[content-right] = Content Right
 regions[content_bottom] = Content Bottom
