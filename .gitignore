@@ -23,5 +23,5 @@ sites/all/themes/README.txt
 
 # Other stuff
 /cache
-Vagrantfile
 sqldump
+Vagrantfile

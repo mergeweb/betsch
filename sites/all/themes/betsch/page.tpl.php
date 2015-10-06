@@ -117,7 +117,7 @@
 				</div><!-- /.header-greybar -->
 				<div id="main-content">
 					<div id="content">
-						<?php print render($page['content-right']); ?>
+						<?php print render($page['content']); ?>
 					</div><!-- /#content -->
 					<div id="content-bottom">
 							<?php print render($page['content_bottom']); ?>
